@@ -1,5 +1,8 @@
 package com.kurodevs.app.backend.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,7 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class ControllerApp {
     
     @GetMapping("/hello")
-    public String hello(){
-        return "Hello world!";
+    public Map<String, String> hello(){
+        HashMap<String, String> map = new HashMap<>();
+        map.put("hello", "world");
+        return map;
     }
 }
