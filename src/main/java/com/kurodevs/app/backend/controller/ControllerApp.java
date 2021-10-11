@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "https://kurodevs.github.io/")
+@CrossOrigin(origins = "*")
 public class ControllerApp {
     
     @GetMapping("/hello")
